@@ -2,19 +2,19 @@ doctype html
 html(lang="ru-RU")
 	head
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 		title Hello world
 		link(rel="stylesheet", href="static/css/main.css")
 	body 
 
 		include ../layout/header.pug
 
-		include ../layout/price.pug
+		.wrapper
 
-		include ../layout/calc.pug
-
-		include ../layout/about.pug
-
-		include ../layout/callback.pug
+			#content
+				include ../layout/content.pug
+			nav#sidebar.active
+				include ../layout/sidebar.pug
 
 		include ../layout/footer.pug
 

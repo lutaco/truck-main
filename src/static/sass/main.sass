@@ -1,5 +1,6 @@
 @import "libs"
 @import "vars"
+@import "sidebar.sass"
 
 .select2-container .select2-selection--single
 	height: 38px
@@ -25,8 +26,8 @@ body
 	min-width: 320px
 	line-height: 1.65
 	overflow-x: hidden
-	background-color: black
-	color: white
+	// background-color: black
+	// color: white
 
 .button
 	display: inline-block
@@ -68,164 +69,237 @@ body
 		&::after
 			opacity: .32
 
-
 .site-header
-	display: flex
-	flex-direction: column
-	min-height: 100vh
-	background: url(../img/header.jpg) 
-	background-color: rgba(black, 0.65)
-
-.darken
-	background-blend-mode: darken
-	background-repeat: no-repeat
-	background-size: cover
-
-.top-line
-	display: flex
-	justify-content: space-between
-	height: 60px
-	line-height: 60px
-	border-bottom: 1px solid rgba(white, 0.5)
-
-.top-menu
-	margin: 0 auto
-	display: flex
-	top: 0
-	font-size: 20px
-	justify-content: space-between
-
-	&__list-item 
-		padding: 0 40px
+	background-color: #dfdfdf
+	border-bottom: 1px solid #b5b7ba
+	padding: 0 36px
+	color: #212529
+	display: flex	
+	height: 80px
+	line-height: 80px
+	font-size: 24px
+	&__contacts
+		margin-left: auto
 		display: flex
-		white-space: nowrap
-		text-transform: uppercase
-		text-decoration: none
-		color: white
-		transition: opacity .5s ease
-		opacity: .7
-		&:hover
-			opacity: 1 
-	
-.phone
-	width: 180px
-	font-size: 18px
-	padding: 0 20px
-	text-align: center
 
-.logo 
-	width: 180px
-	font-size: 18px
-	padding: 0 20px
-
-
-.headline
-	margin: auto
-	text-align: center
-
-	&__title
-		margin: 0 auto
-		text-transform: uppercase
-		font-size: 50px
-
-
-.headline-text
+.contacts-group
+	line-height: 80px
 	display: flex
-	width: 800px
-	margin: auto
-	text-align: center
-
-.section
-	padding: 80px 0px
-	&_gradient
-		background-image: repeating-radial-gradient(ellipse farthest-corner at center top,rgba(#888, 0.5) 0%, black 100%)
-	&_backgr-about
-		background-image: url(../img/Aboutbcg.jpg)
-		background-color: rgba(#080808, 0.85)
-
-.box
-	&__title
-		font-size: 32px
-		margin-top: 0
-	&__content
-		font-size: 14px
-
-.photo
-		width: 100%
-		border: 1px solid rgba(white, 0.5)
-
-.product
-	padding: 25px
-
-.card
-	&__title
+	flex-direction: row-reverse
+	&__phone
+		height: 40px
 		text-align: center
-		text-transform: uppercase
-
-	&__photo
-		height: 250px
-
-
-.form-section
-	padding: 80px 0px
-	&__title
-		text-align: center
-		font-size: 40px
-		margin-bottom: 20
-		margin-top: 0
-
-.calc-form
-	width: 500px
-	margin: 0 auto
-	&__button
-		margin-top: 20px
-		width: 200px
+	&__social
+		height: 40px
+		width: 120px
+		margin-right: 26px
 
 
-
-.main-form-group
-	padding: 10px 0
-	&__label
-		font-size: 22px
-	&__input
-		width: 100%
-		border-radius: 4px
-		padding: 10px 10px 10px 20px
-		&_transparent
-			background-color: transparent
-			color: white
-		&_bottom-line
-			border-radius: 0px
-			border: none
-			border-bottom: 1px solid white
-
-.calc-form__button
-	margin-left: 15px
-
-.cotial
+.social
 	list-style-type: none
 	display: flex
-	justify-content: flex-start
+	justify-content: space-between
 	padding: 0
-	font-size: 20px
+	height: 100%
 	&__item
-		margin-right: 20px
-		display: block
+		font-size: 20px
 		&:hover
-			cursor: pointer
+			color: #717579
+
+.price
+	display: flex
+
+.sidebar-button
+	height: 40px
+	width: 40px
+	line-height: 80px
+	font-size: 40px
+	padding: 0
+	border: none
+	margin-left: 20px
+
+
+
+.phone
+	color: #212529
+	text-decoration: none
+	font-family: 'Lora', serif
+	&:hover
+		color: #717579
+		text-decoration: none
+
+.logo
+	font-family: 'Lora', serif
+
+.wrap
+	display: flex
+
+.product-info
+	font-size: 1.25rem
+	line-height: 1.25rem
+
+// .site-header
+// 	display: flex
+// 	flex-direction: column
+// 	min-height: 100vh
+// 	background: url(../img/header.jpg) 
+// 	background-color: rgba(black, 0.65)
+
+// .darken
+// 	background-blend-mode: darken
+// 	background-repeat: no-repeat
+// 	background-size: cover
+
+// .top-line
+// 	display: flex
+// 	justify-content: space-between
+// 	height: 60px
+// 	line-height: 60px
+// 	border-bottom: 1px solid rgba(white, 0.5)
+
+// .top-menu
+// 	margin: 0 auto
+// 	display: flex
+// 	top: 0
+// 	font-size: 20px
+// 	justify-content: space-between
+
+// 	&__list-item 
+// 		padding: 0 40px
+// 		display: flex
+// 		white-space: nowrap
+// 		text-transform: uppercase
+// 		text-decoration: none
+// 		color: white
+// 		transition: opacity .5s ease
+// 		opacity: .7
+// 		&:hover
+// 			opacity: 1 
+	
+// .phone
+// 	width: 180px
+// 	font-size: 18px
+// 	padding: 0 20px
+// 	text-align: center	
+// 	&__link
+// 		text-decoration: none
+// 		color: #fff
+
+// .logo 
+// 	width: 180px
+// 	font-size: 18px
+// 	padding: 0 20px
+
+
+// .headline
+// 	margin: auto
+// 	text-align: center
+
+// 	&__title
+// 		margin: 0 auto
+// 		text-transform: uppercase
+// 		font-size: 50px
+
+
+// .headline-text
+// 	display: flex
+// 	width: 800px
+// 	margin: auto
+// 	text-align: center
+
+// .section
+// 	padding: 80px 0px
+// 	&_gradient
+// 		background-image: repeating-radial-gradient(ellipse farthest-corner at center top,rgba(#888, 0.5) 0%, black 100%)
+// 	&_backgr-about
+// 		background-image: url(../img/Aboutbcg.jpg)
+// 		background-color: rgba(#080808, 0.85)
+
+// .box
+// 	&__title
+// 		font-size: 32px
+// 		margin-top: 0
+// 	&__content
+// 		font-size: 14px
+
+// .photo
+// 		width: 100%
+// 		border: 1px solid rgba(white, 0.5)
+
+// .product
+// 	padding: 25px
+
+// .card
+// 	&__title
+// 		text-align: center
+// 		text-transform: uppercase
+
+// 	&__photo
+// 		height: 250px
+
+
+// .form-section
+// 	padding: 80px 0px
+// 	&__title
+// 		text-align: center
+// 		font-size: 40px
+// 		margin-bottom: 20
+// 		margin-top: 0
+
+// .calc-form
+// 	width: 500px
+// 	margin: 0 auto
+// 	&__button
+// 		margin-top: 20px
+// 		width: 200px
+
+
+
+// .main-form-group
+// 	padding: 10px 0
+// 	&__label
+// 		font-size: 22px
+// 	&__input
+// 		width: 100%
+// 		border-radius: 4px
+// 		padding: 10px 10px 10px 20px
+// 		&_transparent
+// 			background-color: transparent
+// 			color: white
+// 		&_bottom-line
+// 			border-radius: 0px
+// 			border: none
+// 			border-bottom: 1px solid white
+
+// .calc-form__button
+// 	margin-left: 15px
+
+// .cotial
+// 	list-style-type: none
+// 	display: flex
+// 	justify-content: flex-start
+// 	padding: 0
+// 	font-size: 20px
+// 	&__item
+// 		margin-right: 20px
+// 		display: block
+// 		&:hover
+// 			cursor: pointer
 
 
 
 .footer-section 
-	background-color: $dark
+	background-color: #646464
+	color: #fff
+	border-top: 1px solid
 
-.city
-	list-style-type: none
+// .city
+// 	list-style-type: none
 
-.calc-href
-	text-decoration: none
-	text-transform: uppercase
-	font-size: 20px
-	font-weight: 300
+// .calc-href
+// 	text-decoration: none
+// 	text-transform: uppercase
+// 	font-size: 20px
+// 	font-weight: 300
 
 @import "media" // Всегда в конце

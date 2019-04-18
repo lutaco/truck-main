@@ -45,6 +45,8 @@ gulp.task('scripts:lib', function () {
 			'node_modules/jquery/dist/jquery.min.js',
 			'libs/fontawesome-free-5.8.1-web/js/all.js',
 			'libs/select2-4.0.5/dist/js/select2.js',
+			'node_modules/bootstrap/dist/js/bootstrap.js',
+			// 'node_modules/popper.js/dist/popper.js'
 		])
 		.pipe(gp.concat('libs.min.js'))
 		.pipe(gulp.dest('build/static/js/'))

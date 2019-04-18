@@ -21,4 +21,26 @@ $(document).ready(function () {
 		}
 		else alert('Заполни все поля!!!')
 	});
+
+    if ($( window ).width() < 960) {
+	        $('#sidebar').addClass( "active" );
+    } else {
+        $('#sidebar').removeClass( "active" );
+    }
+
+	$( window ).resize(function() {
+	    if ($( window ).width() < 960) {
+	        $('#sidebar').addClass( "active" );
+	    } else {
+	        $('#sidebar').removeClass( "active" );
+	    }
+	});
+
+	$('#sidebarCollapse').on('click', function () {
+	    $('#sidebar').toggleClass('active');
+	});
+
+	$(function () {
+		$('[data-toggle="popover"]').popover()
+	})
 });
