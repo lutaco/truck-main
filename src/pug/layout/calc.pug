@@ -1,0 +1,29 @@
+section.form-section.section_gradient#section-calc
+	.container
+		h2.form-section__title Калькулятор цен
+		.row.align-items-center
+			.col-md-5
+				p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero nobis quis pariatur ea soluta! Ullam labore rerum obcaecati ex, ipsa velit laudantium cupiditate voluptatibus qui cumque itaque numquam recusandae odio quaerat doloribus tempore laborum suscipit dolor et exercitationem? Ducimus in, velit dicta quia, amet accusamus quos laudantium quibusdam minus omnis est nisi nam vitae alias deleniti aspernatur repellendus numquam corporis!
+				.main-form-group.row
+					label.col-md-4.main-form-group__label Результат
+					input.col-md-8.main-form-group__input.main-form-group__input_transparent.main-form-group__input_bottom-line(type="number" readonly)
+
+
+			.calc-form.col-md-6.ml-auto
+				.main-form-group.row
+					label.col-md-4.main-form-group__label Количество
+					.col-md-8
+						input.main-form-group__input(type="number")
+				- var n = 0;
+				while n++ < 3
+					.main-form-group.row
+						label.col-md-4.main-form-group__label Количество
+						.col-md-8
+							select.main-form-group__input.selectpicker(required)
+								option opt1
+								option opt2
+								option opt3
+				.main-form-group.row
+					.col-md-4
+					button.calc-form__button.button(data-url_calc="{% url 'rest_orders:calc_price'%}") Рассчитать
+

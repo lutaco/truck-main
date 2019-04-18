@@ -1,0 +1,231 @@
+@import "libs"
+@import "vars"
+
+.select2-container .select2-selection--single
+	height: 38px
+
+.select2-container--default .select2-selection--single .select2-selection__rendered
+	line-height: 38px
+
+.select2-container .select2-selection--single .select2-selection__rendered
+	padding-left: 20px
+
+.select2-container--default .select2-results>.select2-results__options
+	color: black
+
+.select2-results__option[aria-selected] 
+	padding-left: 20px
+
+
+
+html, body
+	margin: 0
+body
+	font-size: 16px
+	min-width: 320px
+	line-height: 1.65
+	overflow-x: hidden
+	background-color: black
+	color: white
+
+.button
+	display: inline-block
+	border: none
+	color: #222
+	text-decoration: none
+	background-color: white
+	padding: 15px 45px
+	font-size: 13px
+	text-transform: uppercase
+	font-weight: 600
+	letter-spacing: 3px
+	border-radius: 3px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	&::after
+		transition: background-color .2s ease
+		padding: absolute
+		content: ''
+		height: 4px
+		bottom: 0
+		width: 100%
+		background-color: darken(white, 50%)
+		opacity: .18
+		border-bottom-left-radius: 2px
+		border-bottom-right-radius: 2px
+		left: 0
+	&:focus, &:hover
+		text-decoration: none
+		color: #000
+	&:hover
+		background-color: darken(white, 10%)
+		&::after
+			opacity: .22
+	&:active
+		background-color: darken(white, 5%)
+		&::after
+			opacity: .32
+
+
+.site-header
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	background: url(../img/header.jpg) 
+	background-color: rgba(black, 0.65)
+
+.darken
+	background-blend-mode: darken
+	background-repeat: no-repeat
+	background-size: cover
+
+.top-line
+	display: flex
+	justify-content: space-between
+	height: 60px
+	line-height: 60px
+	border-bottom: 1px solid rgba(white, 0.5)
+
+.top-menu
+	margin: 0 auto
+	display: flex
+	top: 0
+	font-size: 20px
+	justify-content: space-between
+
+	&__list-item 
+		padding: 0 40px
+		display: flex
+		white-space: nowrap
+		text-transform: uppercase
+		text-decoration: none
+		color: white
+		transition: opacity .5s ease
+		opacity: .7
+		&:hover
+			opacity: 1 
+	
+.phone
+	width: 180px
+	font-size: 18px
+	padding: 0 20px
+	text-align: center
+
+.logo 
+	width: 180px
+	font-size: 18px
+	padding: 0 20px
+
+
+.headline
+	margin: auto
+	text-align: center
+
+	&__title
+		margin: 0 auto
+		text-transform: uppercase
+		font-size: 50px
+
+
+.headline-text
+	display: flex
+	width: 800px
+	margin: auto
+	text-align: center
+
+.section
+	padding: 80px 0px
+	&_gradient
+		background-image: repeating-radial-gradient(ellipse farthest-corner at center top,rgba(#888, 0.5) 0%, black 100%)
+	&_backgr-about
+		background-image: url(../img/Aboutbcg.jpg)
+		background-color: rgba(#080808, 0.85)
+
+.box
+	&__title
+		font-size: 32px
+		margin-top: 0
+	&__content
+		font-size: 14px
+
+.photo
+		width: 100%
+		border: 1px solid rgba(white, 0.5)
+
+.product
+	padding: 25px
+
+.card
+	&__title
+		text-align: center
+		text-transform: uppercase
+
+	&__photo
+		height: 250px
+
+
+.form-section
+	padding: 80px 0px
+	&__title
+		text-align: center
+		font-size: 40px
+		margin-bottom: 20
+		margin-top: 0
+
+.calc-form
+	width: 500px
+	margin: 0 auto
+	&__button
+		margin-top: 20px
+		width: 200px
+
+
+
+.main-form-group
+	padding: 10px 0
+	&__label
+		font-size: 22px
+	&__input
+		width: 100%
+		border-radius: 4px
+		padding: 10px 10px 10px 20px
+		&_transparent
+			background-color: transparent
+			color: white
+		&_bottom-line
+			border-radius: 0px
+			border: none
+			border-bottom: 1px solid white
+
+.calc-form__button
+	margin-left: 15px
+
+.cotial
+	list-style-type: none
+	display: flex
+	justify-content: flex-start
+	padding: 0
+	font-size: 20px
+	&__item
+		margin-right: 20px
+		display: block
+		&:hover
+			cursor: pointer
+
+
+
+.footer-section 
+	background-color: $dark
+
+.city
+	list-style-type: none
+
+.calc-href
+	text-decoration: none
+	text-transform: uppercase
+	font-size: 20px
+	font-weight: 300
+
+@import "media" // Всегда в конце
