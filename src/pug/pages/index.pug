@@ -3,6 +3,7 @@ html(lang="ru-RU")
 	head
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+		<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> 
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 		title Hello world
 		link(rel="stylesheet", href="static/css/main.css")
@@ -13,7 +14,7 @@ html(lang="ru-RU")
 		.wrapper
 
 			#content
-				include ../layout/content.pug
+				include ../layout/detail.pug
 			nav#sidebar.active
 				include ../layout/sidebar.pug
 
@@ -21,3 +22,4 @@ html(lang="ru-RU")
 
 		script(src="static/js/libs.min.js")
 		script(src="static/js/main.js")
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> 
