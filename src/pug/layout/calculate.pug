@@ -1,0 +1,57 @@
+.container
+	h2.display-8 Калькулятор цен
+	p.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ipsa aliquid sit quidem error, iusto, officia at sint dolorum, maiores vel expedita harum porro explicabo dolor aliquam, labore facilis magnam beatae doloribus perspiciatis eaque ducimus. Ut nesciunt suscipit omnis possimus.
+	hr.my-8
+	form
+		.form-row
+			.form-group.col-md-6
+				label Категория
+				select.form-control
+					option(selected) Не выбрано
+					option Песок
+					option Земля
+					option Щебенка
+					option Кирпич
+			.form-group.col-md-4
+				label Товар
+				select.form-control
+					option(selected) Не выбрано
+					option Гравий
+					option Извесняк 
+					option Булыжник
+			.form-group.col-md-2
+				label Фракция
+				select.form-control
+					option(selected) Не выбрано
+					option 5/20
+					option 20/40
+					option 40/70
+		.form-row
+			.form-group.col-md-6
+				label Машина
+				select.form-control
+					option(selected) Не выбрано
+					option ЗИЛ
+					option КАМАЗ
+			.form-group.col-md-6
+				label Место
+				select.form-control
+					option(selected) Не выбрано
+					option Губино
+					option Москва
+		.form-row
+			.form-group.col-md-6
+				<legend class="col-form-label">Количество</legend>
+				- var n = 0;
+				while n++ < 10
+					.form-check.form-check-inline
+						input.form-check-input(name="inlineRadioOptions" type="radio")
+						label.form-check-label=n
+			.form-group.col-md-6
+				label Результат
+				input.form-control.res-calc(readonly type="text" value="22000")
+		<button class="btn btn-primary" type="submit">Расчет доставки</button>
+
+
+
+
