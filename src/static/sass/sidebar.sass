@@ -3,6 +3,7 @@
 	width: 100%
 	align-items: stretch
 	overflow: hidden
+	position: relative
 
 #sidebar
 	color:  rgba(0,0,0,.64)
@@ -14,6 +15,19 @@
 	transition: all 0.3s
 	border-left: 2px solid darken(#f1f3f5, 0)
 
+.overlay
+	display: none
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: 5
+	opacity: 0
+
+.overlay.active
+	display: block
+	opacity: 1
 
 #sidebar.active
 	margin-right: -250px

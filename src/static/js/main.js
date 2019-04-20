@@ -3,7 +3,7 @@ $(document).ready(function () {
 	function onEmpty (id_value) {
 		return $(id_value).val() == "";
 	}
-	
+
 
 	$(".selectpicker").select2();
 
@@ -23,25 +23,37 @@ $(document).ready(function () {
 		else alert('Заполни все поля!!!')
 	});
 
-    if ($( window ).width() < 960) {
-	        $('#sidebar').addClass( "active" );
+
+	screen_width = 960;
+
+	key = true
+    if ($( window ).width() < screen_width) {
+	        key = false;
     } else {
         $('#sidebar').removeClass( "active" );
     }
 
 	$( window ).resize(function() {
-	    if ($( window ).width() < 960) {
-	        $('#sidebar').addClass( "active" );
+	    if ($( window ).width() < screen_width) {
+	    	if (key)
+		        $('#sidebar').addClass( "active" );
 	    } else {
 	        $('#sidebar').removeClass( "active" );
 	    }
 	});
 
-	$('#sidebarCollapse').on('click', function () {
-	    $('#sidebar').toggleClass('active');
+
+
+	$('.overlay').on('click', function () {
+		$('#sidebar').addClass('active');
+		$('.overlay').removeClass('active');
+		key = false;
 	});
 
-	$(function () {
-		$('[data-toggle="popover"]').popover()
-	})
+
+	$('#sidebarCollapse').on('click', function () {
+		key = ('#sidebar').hasClass ? true: false;
+		$('#sidebar').toggleClass('active');
+		$('.overlay').toggleClass('active');
+	});
 });
