@@ -3,6 +3,7 @@ $(document).ready(function () {
 	function onEmpty (id_value) {
 		return $(id_value).val() == "";
 	}
+	
 
 	$(".selectpicker").select2();
 
