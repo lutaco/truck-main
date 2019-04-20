@@ -11,6 +11,8 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	.contacts-group
+		font-size: 18px
+	.logo
 		font-size: 20px
 
 
@@ -19,6 +21,20 @@
 @media only screen and (max-width : 540px)
 	.logo
 		display: none
+
+	.contacts-group
+		flex-wrap: wrap
+		&__phone
+			margin-top: 10px
+			width: 100%
+			height: 20px
+			line-height: 20px
+			text-align: center
+		&__social
+			width: 160px
+			margin: 0 auto
+			line-height: 20px
+			height: 20px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
