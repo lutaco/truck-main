@@ -47,13 +47,16 @@ $(document).ready(function () {
 	$('.overlay').on('click', function () {
 		$('#sidebar').addClass('active');
 		$('.overlay').removeClass('active');
+		$('#sidebar').removeClass('s-shadow');
 		key = false;
 	});
-
 
 	$('#sidebarCollapse').on('click', function () {
 		key = ('#sidebar').hasClass ? true: false;
 		$('#sidebar').toggleClass('active');
 		$('.overlay').toggleClass('active');
+		if ($( window ).width() < screen_width)
+			$('#sidebar').toggleClass('s-shadow');
+
 	});
 });

@@ -6,14 +6,15 @@
 	position: relative
 
 #sidebar
-	color:  rgba(0,0,0,.64)
 	font-family: 'Montserrat', sans-serif
 	z-index: 10
 	min-width: 250px
 	max-width: 250px
-	background-color: #fafdfe
+	background-color: white
 	transition: all 0.3s
-	border-left: 1px solid darken(#f1f3f5, 0)
+
+.s-shadow
+	box-shadow: -5px 0px 35px 0px rgba(0,0,0,0.15)
 
 .overlay
 	display: none
@@ -118,13 +119,14 @@ a.article:hover
 	margin-bottom: 0
 
 
+
+
 #content
 	width: 100%
 	padding: 30px 20px
 	min-height: calc(100vh - 160px)
 	transition: all 0.3s
 	color:  rgba(0,0,0,.74)
-
 
 #sidebarCollapse
 	display: none
@@ -139,6 +141,7 @@ a.article:hover
 	
 	#sidebar.active
 		margin-left: 0
+
 	
 	#sidebarCollapse span
 		display: none
