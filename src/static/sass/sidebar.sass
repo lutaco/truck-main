@@ -47,14 +47,18 @@
 
 
 #sidebar ul li a
+	color: inherit
 	padding: 10px 40px
 	font-size: 1.1em
 	display: block
+	text-decoration: none
+
 
 
 
 #sidebar ul li 
 	a:hover
+		text-decoration: none
 		color: #005cbf
 		cursor: pointer
 		background-color: #fff
@@ -137,6 +141,10 @@ a.article:hover
 
 	#sidebar
 		margin-left: -250px
+
+	#sidebar.init
+		margin-left: 0
+		margin-right: -250px
 
 	
 	#sidebar.active

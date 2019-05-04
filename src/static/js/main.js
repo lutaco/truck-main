@@ -7,31 +7,65 @@ $(document).ready(function () {
 
 	$(".selectpicker").select2();
 
-	$('.calc').on( "click", function() {
-
-		if ( !onEmpty('#id_place') && !onEmpty('#id_truck') && !onEmpty('#id_product') && !onEmpty('#id_amount')) {
-
-			var Ur = $( '.calc' ).data( "url_calc" ) + "?amount=" + $('#id_amount').val() + "&truck=" + $('#id_truck').val() + "&product=" + $('#id_product').val() + "&place=" + $('#id_place').val() + '&method=master';
-			$.ajax({
-				url: Ur, 
-
-				success: function(data) {
-					$('#calc-result').val(data.result);
-				},
-			});
-		}
-		else alert('Заполни все поля!!!')
+	$( ".select2-single" ).select2({
 	});
+
+	$( '#id_category option:first-child' ).before('<option selected value="">Все категории</option>');
+
+
+
+ 	$( '#id_category' ).change(function(eventObject) {
+ 		$('.la').remove();
+ 		if ($(event.target).val() == "") 
+ 			$('#id_product_item option').each(function( index ) { 
+ 				$(this).show();
+ 			})
+ 		else {
+
+	 		start_w = $(event.target).val() + '_';
+	 		$('#id_product_item option').each(function( index ) {
+	 			if ( $(this).val().startsWith(start_w) )
+	 				$(this).show();
+	 			else
+	 				$(this).hide();
+			});
+			$( '#id_product_item option:first-child' ).before('<option class="la" disabled selected value="">Выберете что-нибудь</option>');
+		}
+
+  	});
+
+ 	$('.calc').click(function () {
+ 		if ((amount = $('#id_amount').val())
+	 		&& (product = $('#id_product_item').val())
+	 		&& (place = $('#id_place').val())
+	 		&& (truck = $('#id_truck').val())) {
+	 			product = product.substr(product.indexOf('_')+1);
+			 	$.ajax({
+		            url: $('.calc-from').data("url") + "?place=" + place + '&truck=' + truck + '&product_item=' + product + '&amount=' + amount,
+		                
+		            success: function (data) {
+		            	if (data.result == "Failed")
+		            		alert(data.mes);
+		            	else
+			                $('#result').val(data.result);
+		            },
+		        });
+	 		} else {
+	 			alert('Заполни все поля!!!!')
+	 		}
+
+ 	});
 
 
 	screen_width = 960;
+	$('#sidebar').removeClass( "init" );
 
 	key = true
     if ($( window ).width() < screen_width) {
 	        key = false;
-    } else {
-        $('#sidebar').removeClass( "active" );
+	        $('#sidebar').addClass( "active" );
     }
+
 
 	$( window ).resize(function() {
 	    if ($( window ).width() < screen_width) {
@@ -39,6 +73,7 @@ $(document).ready(function () {
 		        $('#sidebar').addClass( "active" );
 	    } else {
 	        $('#sidebar').removeClass( "active" );
+	        $('#sidebar').removeClass('s-shadow');
 	    }
 	});
 
